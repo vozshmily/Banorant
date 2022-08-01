@@ -1,0 +1,13 @@
+header{
+    height: 55vh;
+    overflow: hidden;
+ }
+
+video{
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+}
