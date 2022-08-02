@@ -1,44 +1,63 @@
-import React from 'react'
-import videoBg from '../../assets/agent-background-generic.mp4'
-import picBg from '../../assets/agent-background-generic.JPG'
-import '../header/header.css'
+import React from "react";
+import videoBg from "../../assets/agent-background-generic.mp4";
+import picBg from "../../assets/agent-background-generic.JPG";
+import "../header/header.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
 const Header = () => {
+  const API = "https://valorant-api.com/v1/agents?isPlayableCharacter=True";
 
-  const API = 'https://valorant-api.com/v1/agents?isPlayableCharacter=True';
-
-  const [agents, setAgents] = useState([])
-  
+  const [agents, setAgents] = useState([]);
+  const [agentInfos, setagentInfos] = useState();
 
   useEffect(() => {
-    fetchData()
-  },[])
+    fetchData();
+  }, []);
 
-  const fetchData = async () =>{
-    const {data} = await axios.get(API)
-    setAgents(data.data)
+  const fetchData = async () => {
+    const { data } = await axios.get(API);
+    setAgents(data.data);
+    data.data.sort((a, b) => (a.id > b.id ? 1 : -1));
     //console.log(data)
-  }
+  };
 
-  console.log(agents)
-  
+  //console.log(agents);
+  console.log(agentInfos);
+
   return (
-    <>
-        <div className="container header__container">
-          <video src={videoBg} autoPlay loop muted/>
-          {/* <video preload="true" loop playsinline poster={picBg} data-video="0"><source src={videoBg} type="video/mp4"/></video> */}
-        </div>
-        <div>{agents.map(agent =>(
-        <div key={agent.uuid}>
-          {agent.displayName}
-          <img src={agent.fullPortraitV2} alt="icons" width={250} height={250}/>
-        </div>
-      ))}
-      </div>
-    </>
-  )
-}
+    <header>
+      <div>
+        <video src={videoBg} autoplay loop muted></video>
+        {/* <video preload="true" loop playsinline poster={picBg} data-video="0"><source src={videoBg} type="video/mp4"/></video> */}
+        <div className="header__container">
+          <div id="slider" className="agents__header wrapper">
+            {agents.map((agent) => (
+              <div
+                key={agent.uuid}
+                onClick={(agentInfos) => setagentInfos(agent)}
+              >
+                <i className="h1__font">{agent.displayName.toUpperCase()}</i>
+              </div>
+            ))}
+          </div>
 
-export default Header
+          <div className="agents__image">
+            {!agentInfos ? (
+              ""
+            ) : (
+              <img
+                src={agentInfos.fullPortraitV2}
+                alt="icons"
+                width={600}
+                height={600}
+              />
+            )}
+          </div>
+        </div>
+      </div>
+    </header>
+  );
+};
+
+export default Header;

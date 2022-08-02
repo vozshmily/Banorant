@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Maps = () => {
-  return (
-    <section id='Maps'>Maps</section>
-  )
-}
+  return <section id="Maps">Maps</section>;
+};
 
-export default Maps
+export default Maps;
