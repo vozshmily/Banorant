@@ -1,23 +1,20 @@
 .about__container{
-    display: grid;
+    outline: 2px solid black;
+    height: 20rem;
     place-items: center;
-    grid-template-columns: 35% 50%;
-
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    top: 3rem;
 }
 
-.about__me{
-    width: 100%;
-    aspect-ratio: 1/1;
-    border-radius: 2res;
-    display: grid;
-    place-items: center;
-}
 
 .about__me-image{
-    border-radius: 2rem;
     overflow: hidden;
     transform: rotate(10deg);
     transition: var(--transition);
+    margin-right: 3rem;
 }
 
 .about__me-image:hover{
@@ -43,10 +40,18 @@
 }
 
 .about__content p{
-    margin: 2rem 0 2.6rem;
+    font-size: 1rem;
     color: #000;
     width: 400px;
+    font-weight: 300;
 }
+
+.about__content h5{
+    font-size: 1.5rem;
+    margin-top: .5rem;
+}
+
+
 
 
  /* ===================MEDIUM DEVICES=======================*/
@@ -62,8 +67,8 @@
         display: none;
     }
 
-    .about__content{
-        margin-top: 50px;
-    }
+   
+
+
 
 }

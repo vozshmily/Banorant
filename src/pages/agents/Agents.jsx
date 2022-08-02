@@ -17,8 +17,8 @@ const Agents = ({ getagentSkillInfos }) => {
               <img
                 src={getagentSkillInfos.displayIcon}
                 alt="viper"
-                width={300}
-                height={300}
+                width={250}
+                height={250}
               ></img>
             </div>
           </div>
@@ -29,7 +29,7 @@ const Agents = ({ getagentSkillInfos }) => {
                 <img
                   src={getagentSkillInfos.abilities[0].displayIcon}
                   onClick={(skills) =>
-                    getSkills(getagentSkillInfos.abilities[0].description)
+                    getSkills(getagentSkillInfos.abilities[0])
                   }
                   alt="skill1"
                   width={50}
@@ -40,7 +40,7 @@ const Agents = ({ getagentSkillInfos }) => {
                 <img
                   src={getagentSkillInfos.abilities[1].displayIcon}
                   onClick={(skills) =>
-                    getSkills(getagentSkillInfos.abilities[1].description)
+                    getSkills(getagentSkillInfos.abilities[1])
                   }
                   alt="skill1"
                   width={50}
@@ -51,7 +51,7 @@ const Agents = ({ getagentSkillInfos }) => {
                 <img
                   src={getagentSkillInfos.abilities[2].displayIcon}
                   onClick={(skills) =>
-                    getSkills(getagentSkillInfos.abilities[2].description)
+                    getSkills(getagentSkillInfos.abilities[2])
                   }
                   alt="skill1"
                   width={50}
@@ -62,7 +62,7 @@ const Agents = ({ getagentSkillInfos }) => {
                 <img
                   src={getagentSkillInfos.abilities[3].displayIcon}
                   onClick={(skills) =>
-                    getSkills(getagentSkillInfos.abilities[3].description)
+                    getSkills(getagentSkillInfos.abilities[3])
                   }
                   alt="skill1"
                   width={50}
@@ -70,8 +70,14 @@ const Agents = ({ getagentSkillInfos }) => {
                 ></img>
               </div>
             </div>
-
-            <p>{skills}</p>
+            {!skills ? (
+              ""
+            ) : (
+              <>
+                <h5>{skills.displayName.toUpperCase()}</h5>
+                <p>{skills.description}</p>
+              </>
+            )}
           </div>
         </div>
       )}
