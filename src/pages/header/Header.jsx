@@ -60,15 +60,16 @@ const Header = () => {
 
         <div className="agents__info">
           <article className="about__card">
-            <small>ROLE</small>
-            <h5>DUELIST</h5>
-            <small>BIOGRAPHY</small>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde qui
-              perferendis voluptatibus voluptatum nam dolore eveniet magnam,
-              voluptates earum adipisci. Minima voluptatem quam dolorum,
-              explicabo harum velit officia quas consectetur!
-            </p>
+            {!agentInfos ? (
+              ""
+            ) : (
+              <>
+                <small>ROLE</small>
+                <h5>{agentInfos.role.displayName.toUpperCase()}</h5>
+                <small>BIOGRAPHY</small>
+                <p>{agentInfos.description}</p>
+              </>
+            )}
           </article>
         </div>
       </div>

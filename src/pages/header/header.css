@@ -32,7 +32,7 @@
     left: 50%;
     transform: translateX(-50%);
     flex-direction: column;
-    margin-top: -500px;
+    margin-top: -450px;
 }
 
 .h1__font{
@@ -63,7 +63,7 @@
     border: 1px solid transparent;
     border-radius: 1rem;
     padding: 2rem;
-    text-align: center;
+    text-align: left;
     transition: var(--transition);
     width: 18rem;
 }
@@ -75,15 +75,18 @@
 }
 
 .about__card h5{
-    font-size: 0.95rem;
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
 }
 
 .about__card small{
     font-size: 0.7rem;
     color: var(--color-light);
+    margin: .2rem;
 }
 
 .about__content p{
+    font-size: 1rem;
     margin: 2rem 0 2.6rem;
     color: var(--color-light);
 }
