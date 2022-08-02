@@ -9,13 +9,14 @@
     list-style: none;
     text-decoration: none;
     
+    
 }
 
 :root{
-    --color-bg: #1f1f38;
-    --color-bg-variant: #2c2c6c;
+    --color-bg: #ece8e1;
+    --color-bg-variant: #ff4655;
     --color-primary: #4db5ff;
-    --color-primary-variant: rgba(77, 181, 255, 0.4);
+    --color-primary-variant: #ff4655;;
     --color-white: #fff;
     --color-light: rgba(255, 255, 255, 0.6);
 
@@ -36,6 +37,7 @@ html{
 
 body{
     font-family: 'Ariel', sans-serif;
+    background: var(--color-bg);
 }
 
 h1, h2, h3, h4, h5 {
@@ -49,4 +51,20 @@ h1 {
 section{
     margin-top: 8rem;
     height: 100vh;
+}
+
+.about__card{
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: left;
+    border-color: var(--color-primary-variant);
+    transition: var(--transition);
+    width: 18rem;
+}
+
+.about__card:hover{
+    background: var(--color-bg-variant);
+    border-color: var(--color-primary-variant);
+    cursor: default;
 }

@@ -47,7 +47,7 @@
     overflow-y: auto;
     overflow-x: hidden;
     perspective: 10px;
-    
+    cursor: default;
 }
 
 .agents__info{
@@ -59,20 +59,7 @@
     font-size: 0.9rem;
 }
 
-.about__card{
-    border: 1px solid transparent;
-    border-radius: 1rem;
-    padding: 2rem;
-    text-align: left;
-    transition: var(--transition);
-    width: 18rem;
-}
 
-.about__card:hover{
-    background: rgb(172, 63, 63);
-    border-color: var(--color-primary-variant);
-    cursor: default;
-}
 
 .about__card h5{
     font-size: 1.5rem;

@@ -4,12 +4,14 @@ import Footer from './pages/Footer';
 import Body from './pages/Body';
 import Maps from './pages/Maps';
 import Agents from './pages/agents/Agents';
+import Nav from './pages/navigation/Nav';
 
 
 function App() {
   
   return (
     <>
+    <Nav/>
     <Header />
     <Agents />
     <Body />
