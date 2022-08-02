@@ -107,4 +107,15 @@
         left: 30%;
         transform: translateX(-60%);
     }
+
+    .agents__image{
+        left: 60%;
+        transform: translateX(-50%);
+    }
+
+
+    .about__card{
+        display: none;
+    }
+    
 }
