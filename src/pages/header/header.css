@@ -1,66 +1,107 @@
-
-header{
+.main__container{
     outline: 2px solid black;
+    height: 30rem;
+}
+
+.sub__container{
+    height: 30rem;
     position: relative;
-    display: flex;
     justify-content: center;
     align-items: center;
-    
+    overflow: auto;
 }
-video{
+
+.video___bg video{
+    position: absolute;
     -o-object-fit: cover;
     object-fit: contain;
-    -o-object-position: center;
-    object-position: center;
 }
 
-.header__video{
-    background-size: 100% 50%;
-}
-.header__container{
-    display: grid;
-    place-items: center;
-    grid-template-columns: 35% 50%;
-    gap: 20%;
-}
 
-.agents__header, .agents__image{
+.agents__header{
+    left: 20%;
     position: absolute;
+    z-index: 1000;
     top: 0;
     flex-direction: column;
+    
 }
 
 .agents__image{
-    height: 50%;
-    margin-top: 5rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column;
+    margin-top: -500px;
 }
 
 .h1__font{
     color: white;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 1000;
 }
 
 .wrapper{
-    width: 100%;
-    height: 100%;
+    left: 40%;
+    transform: translateX(-60%);
     overflow-y: auto;
     overflow-x: hidden;
     perspective: 10px;
+    
+}
+
+.agents__info{
+    color: white;
+    position: absolute;
+    margin-top: -400px;
+    margin-left: 60%;
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+.about__card{
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    transition: var(--transition);
+    width: 18rem;
+}
+
+.about__card:hover{
+    background: rgb(172, 63, 63);
+    border-color: var(--color-primary-variant);
+    cursor: default;
+}
+
+.about__card h5{
+    font-size: 0.95rem;
+}
+
+.about__card small{
+    font-size: 0.7rem;
+    color: var(--color-light);
+}
+
+.about__content p{
+    margin: 2rem 0 2.6rem;
+    color: var(--color-light);
 }
 
 /* ===================MEDIUM DEVICES=======================*/
 
 @media screen and (max-width: 1024px)  {
-    .h1__font{
-        font-size: 2rem;
+    .wrapper{
+        left: 30%;
+        transform: translateX(-40%);
     }
 }
 
 /* ===================SMALL DEVICES=======================*/
 
 @media screen and (max-width: 600px)  {
-    .h1__font{
-        font-size: 1rem;
+    .wrapper{
+        left: 30%;
+        transform: translateX(-60%);
     }
 }

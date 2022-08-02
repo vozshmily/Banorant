@@ -26,37 +26,53 @@ const Header = () => {
   console.log(agentInfos);
 
   return (
-    <header>
-      <div>
-        <video src={videoBg} autoplay loop muted></video>
-        {/* <video preload="true" loop playsinline poster={picBg} data-video="0"><source src={videoBg} type="video/mp4"/></video> */}
-        <div className="header__container">
-          <div id="slider" className="agents__header wrapper">
-            {agents.map((agent) => (
-              <div
-                key={agent.uuid}
-                onClick={(agentInfos) => setagentInfos(agent)}
-              >
-                <i className="h1__font">{agent.displayName.toUpperCase()}</i>
-              </div>
-            ))}
-          </div>
+    <div className="main__container">
+      <div className="sub__container">
+        <div className="video___bg">
+          <video src={videoBg} muted loop autoPlay></video>
+        </div>
 
-          <div className="agents__image">
-            {!agentInfos ? (
-              ""
-            ) : (
-              <img
-                src={agentInfos.fullPortraitV2}
-                alt="icons"
-                width={600}
-                height={600}
-              />
-            )}
-          </div>
+        <div id="slider" className="agents__header wrapper">
+          {agents.map((agent) => (
+            <div
+              key={agent.uuid}
+              onClick={(agentInfos) => setagentInfos(agent)}
+            >
+              <i className="h1__font">{agent.displayName.toUpperCase()}</i>
+            </div>
+          ))}
         </div>
       </div>
-    </header>
+
+      <div className="agent__details">
+        <div className="agents__image">
+          {!agentInfos ? (
+            ""
+          ) : (
+            <img
+              src={agentInfos.fullPortraitV2}
+              alt="icons"
+              width={600}
+              height={600}
+            />
+          )}
+        </div>
+
+        <div className="agents__info">
+          <article className="about__card">
+            <small>ROLE</small>
+            <h5>DUELIST</h5>
+            <small>BIOGRAPHY</small>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde qui
+              perferendis voluptatibus voluptatum nam dolore eveniet magnam,
+              voluptates earum adipisci. Minima voluptatem quam dolorum,
+              explicabo harum velit officia quas consectetur!
+            </p>
+          </article>
+        </div>
+      </div>
+    </div>
   );
 };
 
