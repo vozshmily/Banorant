@@ -82,7 +82,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <Agents getagentSkillInfos={agentInfos} />
+      <Agents getAgent={agentInfos} />
     </>
   );
 };
