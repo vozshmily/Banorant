@@ -30,9 +30,7 @@ const Header = () => {
     <>
       <div className="main__container">
         <div className="sub__container">
-          <div className="video___bg">
-            <video src={videoBg} muted loop autoPlay></video>
-          </div>
+          <video src={videoBg} muted loop autoPlay></video>
 
           <div id="slider" className="agents__header wrapper">
             {agents.map((agent) => (

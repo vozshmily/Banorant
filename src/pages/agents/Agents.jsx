@@ -5,6 +5,7 @@ import "./agents.css";
 const Agents = ({ getagentSkillInfos }) => {
   const [skills, getSkills] = useState();
   //console.log(getagentSkillInfos);
+
   console.log(skills);
   return (
     <section id="agents">
@@ -71,6 +72,16 @@ const Agents = ({ getagentSkillInfos }) => {
               </div>
             </div>
             {!skills ? (
+              // !getagentSkillInfos ? (
+              //   ""
+              // ) : (
+              //   <>
+              //     <h5>
+              //       {getagentSkillInfos.abilities[0].displayName.toUpperCase()}
+              //     </h5>
+              //     <p>{getagentSkillInfos.abilities[0].description}</p>
+              //   </>
+              // )
               ""
             ) : (
               <>

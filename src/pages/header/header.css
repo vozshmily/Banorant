@@ -12,9 +12,7 @@
 }
 
 .video___bg video{
-    position: absolute;
-    -o-object-fit: cover;
-    object-fit: contain;
+    position: fixed;
 }
 
 
