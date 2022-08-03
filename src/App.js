@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './pages/header/Header';
 import Footer from './pages/Footer';
 import Body from './pages/Body';
-import Maps from './pages/Maps';
+import Maps from './pages/maps/Maps';
 import Agents from './pages/agents/Agents';
 import Nav from './pages/navigation/Nav';
 
